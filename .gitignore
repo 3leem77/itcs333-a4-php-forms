@@ -2,3 +2,4 @@ tests/vendor/
 vendor/
 .DS_Store
 *.log
+.phpunit.result.cache
