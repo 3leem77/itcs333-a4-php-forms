@@ -1,0 +1,17 @@
+name: autograde
+on: [push, pull_request]
+permissions:
+  contents: read
+jobs:
+  grade:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.2'
+          extensions: mbstring
+      - name: Install test dependencies
+        run: composer install --working-dir=tests --no-interaction
+      - name: Run PHPUnit tests
+        run: ./run_tests.sh

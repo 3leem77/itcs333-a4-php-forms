@@ -1,0 +1,11 @@
+{
+  "name": "itcs333/a4-tests",
+  "description": "Autograder for ITCS333 A4 (PHP Forms). Do not modify.",
+  "type": "project",
+  "require-dev": {
+    "phpunit/phpunit": "^11.5"
+  },
+  "config": {
+    "process-timeout": 0
+  }
+}

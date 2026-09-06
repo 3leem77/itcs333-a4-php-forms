@@ -1,0 +1,4 @@
+tests/vendor/
+vendor/
+.DS_Store
+*.log

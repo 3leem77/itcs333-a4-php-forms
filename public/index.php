@@ -1,0 +1,34 @@
+<?php
+declare(strict_types=1);
+
+/**
+ * ITCS333 A4 starter — contact form.
+ * Requirements (see README rubric):
+ *   - GET: render the form
+ *   - POST: validate name (required, 2-60 chars), email (valid), message (required, 10-1000 chars)
+ *   - invalid POST: re-render with inline errors + repopulated fields (200)
+ *   - valid POST: redirect (302/303) to a success page (PRG)
+ *   - escape all output with htmlspecialchars
+ */
+
+require_once __DIR__ . '/../src/validate.php';
+
+// TODO: implement the form handling here.
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Contact Us</title>
+</head>
+<body>
+  <h1>Contact Us</h1>
+  <!-- TODO: render the form, inline errors, and repopulated values -->
+  <form method="post" action="index.php">
+    <label>Name <input type="text" name="name"></label><br>
+    <label>Email <input type="email" name="email"></label><br>
+    <label>Message <textarea name="message"></textarea></label><br>
+    <button type="submit">Send</button>
+  </form>
+</body>
+</html>
